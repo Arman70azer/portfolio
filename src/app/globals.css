@@ -1,21 +1,125 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #232323; /* Fond général */
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  opacity: 0; /* Initialement caché pour l'animation */
+  transform: translateY(30px); /* Décalage vers le bas pour l'animation */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Accueil */
+.accueil {
+  display: flex;
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: flex-start; /* Place le logo à gauche */
+  background: linear-gradient(90deg, #1a202c, #2d3748);
+  padding: 20px 20px;
+}
+
+.logo-container {
+  flex-shrink: 0; /* Empêche le logo de se réduire */
+  margin-right: 20px; /* Espacement entre le logo et le texte */
+}
+
+.text-container {
+  flex-grow: 1; /* Permet au texte de prendre l'espace restant */
+  text-align: left; /* Aligner le texte à gauche */
+  margin-right: 20px;
+}
+
+.titre {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg,rgba(245, 161, 203, 0.9), rgba(255, 99, 71, 0.9) );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sous-titre {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+
+
+/* Section Projets */
+.projets {
+  background-color: #f7fafc;
+  color: #2d3748;
+
+  
+}
+
+.projets .titre {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ecc94b;
+}
+
+.projets .sous-titre {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+/* Section Contact */
+.contact {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.contact .titre {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #63b3ed;
+}
+
+.contact .sous-titre {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+
+/* Animation Fade-In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quand la section devient visible */
+.section.visible {
+  animation: fadeIn 1s forwards;
 }
