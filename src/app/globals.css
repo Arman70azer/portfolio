@@ -123,3 +123,43 @@ body {
 .section.visible {
   animation: fadeIn 1s forwards;
 }
+
+.projects {
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects .MuiGrid-root {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ajoute un effet subtil aux cartes */
+.projects .MuiCard-root {
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects .MuiCard-root:hover {
+  transform: scale(1.05);
+}
+
+.title-project {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 24px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.4); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

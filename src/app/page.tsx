@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import LineRandomCanva from "./lib/line_random_canva";
 import { LogoArman } from "./lib/logo";
+import MediaCard from "./lib/card";
+import { Grid } from "@mui/material";
 
 export default function Home() {
   useEffect(() => {
@@ -36,20 +38,84 @@ export default function Home() {
         </div>
         <div className="text-container">
           <h1 className="titre">Welcome To My Portfolio</h1>
-          <p className="sous-titre">Developer passionate about the web and mobile applications.</p>
+          <p className="sous-titre">Developer Fullstack passionate about the web and mobile applications.</p>
         </div>
       </section>
 
       <LineRandomCanva />
 
       {/* 🎨 Section Projets */}
+
       <section className="section projets">
         <h2 className="titre">My Projects</h2>
         <p className="sous-titre">
           Découvrez mes travaux en React, Next.js et plus encore. Je crée des applications modernes et réactives pour améliorer l'expérience utilisateur.
         </p>
-      </section>
 
+        <div className="projects js">
+          <p className="title-project">Flutter:</p>
+
+          <Grid container spacing={4} justifyContent={"center"}>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+          </Grid>
+        </div>
+
+        <div className="projects golang">
+          <p className="title-project">Golang:</p>
+
+          <Grid container spacing={4} justifyContent={"center"}>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+          </Grid>
+        </div>
+
+        <div className="projects golang">
+          <p className="title-project">Rust:</p>
+
+          <Grid container spacing={4} justifyContent={"center"}>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+          </Grid>
+        </div>
+
+        <div className="projects golang">
+          <p className="title-project">JS:</p>
+
+          <Grid container spacing={4} justifyContent={"center"}>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard />
+            </Grid>
+          </Grid>
+        </div>
+      </section>
       <LineRandomCanva />
 
       {/* 🎨 Section Contact */}
