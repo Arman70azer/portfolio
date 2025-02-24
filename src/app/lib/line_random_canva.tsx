@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { createSegment, drawSegments, drawText } from "./canva_func";
+import { createSegment, drawSegments } from "./canva_func";
 
 export default function LineRandomCanva() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,8 +23,8 @@ export default function LineRandomCanva() {
         //   textCanvas.width = canvas.width;
         //   textCanvas.height = canvas.height;
 
-          let segments = [];
-          let maxSegments = Math.floor((canvas.width * canvas.height) / 30);
+          const segments = [];
+          const maxSegments = Math.floor((canvas.width * canvas.height) / 30);
 
           for (let i = 0; i < 100; i++) {
             segments.push(createSegment(canvas.width, canvas.height));

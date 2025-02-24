@@ -6,8 +6,9 @@ export default function AllProjects() {
       <section className="section projets">
         <h2 className="titre">My Projects</h2>
         <p className="sous-titre">
-          Découvrez mes travaux en React, Next.js et plus encore. Je crée des applications modernes et réactives pour améliorer l'expérience utilisateur.
+          Discover my work in React, Next.js, and more. I build modern, responsive applications to enhance the user experience.
         </p>
+
   
         <div className="projects">
           <p className="title-project flutter">Flutter:</p>

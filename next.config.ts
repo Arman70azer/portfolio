@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export', // Assure-toi que le site est exporté statiquement
 };
 
 export default nextConfig;

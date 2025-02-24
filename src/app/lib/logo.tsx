@@ -1,18 +1,15 @@
+import Image from "next/image";
+
 const LogoArman = () => {
     return (
-      <img
+      <Image
         id="image"
         src="/assets/logo.png"
         alt="Arman"
-        style={{
-          width: "200px", // Ajuste la taille du logo ici
-          height: "auto", // Garde le ratio du logo
-        }}
+        width={200} 
+        height={200}
       />
     );
-  };
-  
+};
 
-export{
-    LogoArman,
-}
+export { LogoArman };
