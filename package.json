@@ -8,7 +8,7 @@
     "lint": "next lint",
     "build": "next build", 
     "predeploy": "npm run build",
-    "deploy": "cp -r out/* ./ && git add . && git commit -m 'Deploy' && git push origin main"
+    "deploy": "cp -r out/* ./ && git add . && git commit -m 'Deploy static site' && git push origin main"
   },
   "homepage": "https://arman70azer.github.io/portfolio",
   "dependencies": {
